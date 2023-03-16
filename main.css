@@ -136,11 +136,9 @@ header span {
 }
 
 .slider {
-  /* position: relative; */
-  display: flex;
-  flex-direction: row;
+  position: relative;
   overflow: hidden;
-  width: 50%;
+  width: 80%;
   background-color: gray;
   height: 300px;
 }
@@ -149,4 +147,17 @@ header span {
   height: 280px;
   width: 100%;
   background-color: #6c88b8;
+  position: absolute;
+}
+
+.slide-1 {
+  background-color: green;
+}
+
+.slide-2 {
+  background-color: black;
+}
+
+.slide-3 {
+  background-color: white;
 }
