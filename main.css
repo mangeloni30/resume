@@ -111,6 +111,7 @@ header span {
 
 .section-4 {
   background-color: #13315c;
+  height: 70vh;
 }
 
 .quarter-line {
@@ -138,13 +139,13 @@ header span {
 .slider {
   position: relative;
   overflow: hidden;
-  width: 50vw;
+  width: 90vw;
   /* background-color: gray; */
-  height: 300px;
+  height: 100%;
 }
 
 .slide {
-  height: 280px;
+  height: 340px;
   width: 100%;
   position: absolute;
   display: flex;
@@ -154,8 +155,9 @@ header span {
 
 .slider-wrapper {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   width: 100%;
+  height: 100%;
 }
 
 /* .slide-1 {
@@ -171,17 +173,16 @@ header span {
 } */
 
 .experience-info-wrapper {
-  width: 80%;
+  width: 100%;
   display: flex;
-  justify-content: left;
-  flex-direction: column;
+  justify-content: center;
 }
 
-.slider-number-wrapper {
+/* .slider-number-wrapper {
   display: flex;
   justify-content: space-between;
   width: 100%;
-}
+} */
 
 .btn-left-wrapper, .btn-right-wrapper {
   display: flex;
@@ -195,6 +196,26 @@ header span {
 
 .slider-content {
   border: 1px solid #f58212;
+  height: 90%;
+  width: 95%;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.title-slider-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.experience-slider-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.title-subtitle-wrapper {
   height: 90%;
   width: 95%;
   border-radius: 5px;
