@@ -8,36 +8,50 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <header>
-      <span id="home-button"> Home </span>
-      <span id="about-button"> About </span>
-      <span id="services-button">Skills</span>
-      <span id="resume-button">Work experience</span>
-      <span>Contact</span>
-      <span id="contract-button" class="primary">Contract Me</span>
-    </header>
-    <section id="home" class="section section-1">
-      <img class="portfolio-pic" src="./img/martinPortfolio.jpeg" />
-      <span class="fullname">Martin Angeloni</span>
-      <span class="occupation">Frontend Developer</span>
+    <section id="home" class="section-1">
+      <header>
+        <nav>
+          <span id="home-button"> Home </span>
+          <span id="about-button"> About </span>
+          <span id="services-button">Services</span>
+          <span id="resume-button">Work experience</span>
+          <span>Contact</span>
+          <span id="contract-button" class="primary">Contract Me</span>
+        </nav>
+      </header>
+      <div class="pic-fullname-wrapper">
+        <div class="pic-fullname-occupation-wrapper">
+          <div class="pic-wrapper">
+            <img class="portfolio-pic" src="./img/martinPortfolio.jpeg" />
+          </div>
+          <div class="fullname-occupation-wrapper">
+            <span class="fullname">Martin Angeloni</span>
+            <span class="occupation">Frontend Developer</span>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="about" class="section section-2">
-      <div class="about-pic-wrapper">
-        <img class="about-pic" src="./img/martinPortfolio.jpeg" />
-      </div>
-      <div class="about-wrapper">
-        <h3 class="primary">Discover</h3>
-        <h2>About Me</h2>
-        <div class="quarter-line"></div>
-        <p>
-          I’m Front End developer with experience in maintenance and development
-          web apps. My main skills are React - Redux - Hooks - React testing
-          library, preprocessors such as Sass/Less and Styled Components. Also I
-          have worked with Typescript and an old technology which is AngularJS. I
-          love to be a good teammate helping and supporting them if its needed.
-          Always available to learn more about frameworks and another
-          technologies.
-        </p>
+      <div class="flex">
+        <div class="flex-wrapper">
+          <div class="about-pic-wrapper">
+            <img class="about-pic" src="./img/martinPortfolio.jpeg" />
+          </div>
+          <div class="about-wrapper">
+            <h3 class="primary">Discover</h3>
+            <h2>About Me</h2>
+            <div class="quarter-line"></div>
+            <p>
+              I’m Front End developer with experience in maintenance and development
+              web apps. My main skills are React - Redux - Hooks - React testing
+              library, preprocessors such as Sass/Less and Styled Components. Also I
+              have worked with Typescript and an old technology which is AngularJS. I
+              love to be a good teammate helping and supporting them if its needed.
+              Always available to learn more about frameworks and another
+              technologies.
+            </p>
+          </div>
+        </div>
       </div>
       <div class="number-wrapper">
         01
@@ -45,7 +59,17 @@
       </div>
     </section>
     <section id="services" class="section section-3">
-      <span>Skills</span>
+      <div class="flex">
+        <div>
+          <h3 class="primary">What I do</h3>
+            <h2>My services</h2>
+          <div class="quarter-line"></div>
+        </div>
+      </div>
+      <div class="number-wrapper">
+        02
+        <div class="quarter-number-line"></div>
+      </div>
     </section>
     <section id="resume" class="section section-4">
       <div class="title-slider-wrapper">
@@ -241,6 +265,10 @@
             </g>
           </svg>
         </div>
+      </div>
+      <div class="number-wrapper">
+        03
+        <div class="quarter-number-line"></div>
       </div>
     </section>
     <script src="./index.js"></script>

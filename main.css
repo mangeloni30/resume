@@ -9,9 +9,7 @@ body {
 }
 
 header {
-  position: fixed;
   top: 0;
-  padding-right: 20px;
   background-color: rgba(104, 104, 104, 0.2);
   height: 100px;
   width: 100%;
@@ -19,6 +17,19 @@ header {
   justify-content: right;
   align-items: center;
   font-weight: 700;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.sticky {
+  position: fixed;
+  animation-duration: 0.5s;
+  animation-name: fade;
+  animation-delay: 0.2s;
+  animation-fill-mode: backwards;
 }
 
 header span {
@@ -37,7 +48,7 @@ header span {
 }
 
 .section-1 {
-  height: 50vh;
+  height: 55vh;
   background-image: url("./img/wood.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -55,7 +66,7 @@ header span {
   border-radius: 1%;
 }
 
-.section-2 {
+.section-2, .section-3 {
   flex-direction: row;
 }
 
@@ -73,7 +84,7 @@ header span {
   flex-direction: column;
 }
 
-.about-pic-wrapper, .about-wrapper {
+.about-wrapper {
   width: 50vw;
 }
 
@@ -101,17 +112,15 @@ header span {
   font-size: 25px;
 }
 
-.section-2 {
-  
-}
-
 .section-3 {
   background-color: #0b2545;
 }
 
 .section-4 {
   background-color: #13315c;
-  height: 70vh;
+  height: 85vh;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .quarter-line {
@@ -140,7 +149,6 @@ header span {
   position: relative;
   overflow: hidden;
   width: 90vw;
-  /* background-color: gray; */
   height: 100%;
 }
 
@@ -151,39 +159,19 @@ header span {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* transition: transform 1s; */
 }
 
 .slider-wrapper {
   display: flex;
-  /* justify-content: center; */
   width: 100%;
   height: 100%;
 }
-
-/* .slide-1 {
-  background-color: green;
-}
-
-.slide-2 {
-  background-color: black;
-}
-
-.slide-3 {
-  background-color: white;
-} */
 
 .experience-info-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-
-/* .slider-number-wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-} */
 
 .btn-left-wrapper, .btn-right-wrapper {
   display: flex;
@@ -213,6 +201,7 @@ header span {
   justify-content: center;
   flex-direction: column;
   height: 100%;
+  width: 80%;
 }
 
 .title-subtitle-wrapper {
@@ -220,4 +209,38 @@ header span {
   width: 95%;
   border-radius: 5px;
   padding: 12px;
+}
+
+.pic-fullname-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+}
+
+.pic-fullname-occupation-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.pic-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.fullname-occupation-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  padding-left: 5%;
+}
+
+.flex-wrapper {
+  display: flex;
 }

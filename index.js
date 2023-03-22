@@ -51,7 +51,7 @@ const goToSlide = (slideParam) => {
   slides.forEach((slide, index) => {
     slide.style.transform = `translateX(${100 * (index - slideParam)}%)`
   })
-}
+};
 
 
 const nextSlide = () => {
@@ -61,7 +61,7 @@ const nextSlide = () => {
     currentSlide++;
   }
   goToSlide(currentSlide);
-}
+};
 
 const prevSlide = () => {
   if (currentSlide === 0) {
@@ -70,7 +70,27 @@ const prevSlide = () => {
     currentSlide--;
   }
   goToSlide(currentSlide);
-}
+};
 
-btnRight.addEventListener("click", nextSlide)
-btnLeft.addEventListener("click", prevSlide)
+btnRight.addEventListener("click", nextSlide);
+btnLeft.addEventListener("click", prevSlide);
+
+const header = document.querySelector("header");
+
+const callBack = (entries, observer) => {
+  const [entry] = entries;
+  console.log("entry ", entry);
+  if (!entry.isIntersecting) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+};
+
+const options = {
+  root: null,
+  threshold: 0
+};
+
+const observer = new IntersectionObserver(callBack, options);
+observer.observe(homeSection);
