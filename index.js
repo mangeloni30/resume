@@ -34,7 +34,15 @@ resumeButton.addEventListener("click", onClickResume);
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 const maxSlide = slides.length;
-slides.forEach((slide, index) => slide.style.transform = `translateX(${100 * index}%)`);
+slides.forEach((slide, index) => {
+  slide.style.transform = `translateX(${100 * index}%)`
+});
+
+setTimeout(() => {
+  slides.forEach((slide, index) => {
+    slide.style.transition = "transform 1s";
+  });
+}, 1000);
 
 const btnRight = document.querySelector(".btn-right");
 const btnLeft = document.querySelector(".btn-left");

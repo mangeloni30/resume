@@ -151,6 +151,7 @@ header span {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* transition: transform 1s; */
 }
 
 .slider-wrapper {
@@ -195,7 +196,6 @@ header span {
 }
 
 .slider-content {
-  border: 1px solid #f58212;
   height: 90%;
   width: 95%;
   border-radius: 5px;
