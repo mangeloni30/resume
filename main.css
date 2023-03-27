@@ -66,10 +66,6 @@ header span {
   border-radius: 1%;
 }
 
-.section-2, .section-3 {
-  flex-direction: row;
-}
-
 .about-content-wrapper {
   display: flex;
 }
@@ -148,8 +144,10 @@ header span {
 .slider {
   position: relative;
   overflow: hidden;
-  width: 90vw;
+  width: 80vw;
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .slide {
@@ -158,7 +156,6 @@ header span {
   position: absolute;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .slider-wrapper {
@@ -193,7 +190,7 @@ header span {
 .title-slider-wrapper {
   display: flex;
   justify-content: center;
-  height: 100%;
+  height: 60vh;
 }
 
 .experience-slider-wrapper {
@@ -202,13 +199,6 @@ header span {
   flex-direction: column;
   height: 100%;
   width: 80%;
-}
-
-.title-subtitle-wrapper {
-  height: 90%;
-  width: 95%;
-  border-radius: 5px;
-  padding: 12px;
 }
 
 .pic-fullname-wrapper {
@@ -234,13 +224,18 @@ header span {
   text-align: center;
 }
 
-.flex {
+.main-section-content-wrapper {
   display: flex;
   width: 100%;
   justify-content: left;
   padding-left: 5%;
+  flex-direction: column;
 }
 
 .flex-wrapper {
   display: flex;
+}
+
+.section {
+  flex-direction: row;
 }
