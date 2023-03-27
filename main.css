@@ -39,7 +39,7 @@ header span {
 }
 
 .section {
-  height: 50vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -238,4 +238,31 @@ header span {
 
 .section {
   flex-direction: row;
+}
+
+.skill {
+  border: 1px solid #f58212;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.skill:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.skill-quarter-wrapper {
+  width: 95%;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }

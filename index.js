@@ -2,10 +2,10 @@
 
 const homeButton = document.querySelector("#home-button");
 const aboutButton = document.querySelector("#about-button");
-const servicesButton = document.querySelector("#services-button");
+const skillButton = document.querySelector("#skill-button");
 const resumeButton = document.querySelector("#resume-button");
 const aboutSection = document.querySelector("#about");
-const servicesSection = document.querySelector("#services");
+const skillSection = document.querySelector("#skill");
 const homeSection = document.querySelector("#home");
 const resumeSection = document.querySelector("#resume");
 
@@ -18,7 +18,7 @@ const onClickAbout = () => {
 }
 
 const onClickServices = () => {
-  servicesSection.scrollIntoView({ behavior: "smooth" });
+  skillSection.scrollIntoView({ behavior: "smooth" });
 }
 
 const onClickResume = () => {
@@ -27,7 +27,7 @@ const onClickResume = () => {
 
 homeButton.addEventListener("click", onClickHome);
 aboutButton.addEventListener("click", onClickAbout);
-servicesButton.addEventListener("click", onClickServices);
+skillButton.addEventListener("click", onClickServices);
 resumeButton.addEventListener("click", onClickResume);
 
 
