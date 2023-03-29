@@ -28,7 +28,7 @@ header {
   position: fixed;
   animation-duration: 0.5s;
   animation-name: fade;
-  animation-delay: 0.2s;
+  animation-delay: 0.3s;
   animation-fill-mode: backwards;
 }
 
@@ -265,4 +265,20 @@ header span {
 a {
   text-decoration: none;
   color: #fff;
+}
+
+.contact-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.contact-text-wrapper {
+  width: 100%;
+  margin-left: 5%;
+}
+
+.social-wrapper {
+  margin-top: 1%;
+  margin-left: 1%;
 }

@@ -4,10 +4,12 @@ const homeButton = document.querySelector("#home-button");
 const aboutButton = document.querySelector("#about-button");
 const skillButton = document.querySelector("#skill-button");
 const resumeButton = document.querySelector("#resume-button");
+const contactButton = document.querySelector("#contact-button");
 const aboutSection = document.querySelector("#about");
 const skillSection = document.querySelector("#skill");
 const homeSection = document.querySelector("#home");
 const resumeSection = document.querySelector("#resume");
+const contactSection = document.querySelector("#contact");
 
 const onClickHome = () => {
   homeSection.scrollIntoView({ behavior: "smooth" });
@@ -25,10 +27,15 @@ const onClickResume = () => {
   resumeSection.scrollIntoView({ behavior: "smooth" });
 }
 
+const onClickContact = () => {
+  contactSection.scrollIntoView({ behavior: "smooth" });
+}
+
 homeButton.addEventListener("click", onClickHome);
 aboutButton.addEventListener("click", onClickAbout);
 skillButton.addEventListener("click", onClickServices);
 resumeButton.addEventListener("click", onClickResume);
+contactButton.addEventListener("click", onClickContact);
 
 
 let currentSlide = 0;
