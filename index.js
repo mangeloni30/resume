@@ -86,7 +86,6 @@ const header = document.querySelector("header");
 
 const callBack = (entries, observer) => {
   const [entry] = entries;
-  console.log("entry ", entry);
   if (!entry.isIntersecting) {
     header.classList.add("sticky");
   } else {
@@ -101,3 +100,19 @@ const options = {
 
 const observer = new IntersectionObserver(callBack, options);
 observer.observe(homeSection);
+
+const gmailContact = document.querySelector(".contact-copy-wrapper p");
+
+const gmailCopyClick = () => {
+  const mailAddress = document.querySelector(".contact-mail").textContent;
+  // Create a new clipboard object
+  navigator.clipboard.writeText(mailAddress.trim())
+    .then(function() {
+      // do something
+    })
+    .catch(function(error) {
+      // do something
+    });
+}
+
+gmailContact.addEventListener("click", gmailCopyClick);

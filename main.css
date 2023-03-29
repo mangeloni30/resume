@@ -282,3 +282,23 @@ a {
   margin-top: 1%;
   margin-left: 1%;
 }
+
+.contact-copy-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+.contact-copy-wrapper p {
+  margin-right: 8px;
+} 
+
+.copy-icon {
+  display: none;
+}
+
+.contact-copy-wrapper:hover .copy-icon {
+  display: inline-block;
+}
