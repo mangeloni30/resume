@@ -113,17 +113,15 @@ const gmailContact = document.querySelector(".contact-copy-wrapper p");
  */
 const displayToast = (isSuccess = true) => {
   const toast = document.querySelector(".toast");
-  const embedTag = document.querySelector(".toast embed");
-  if (isSuccess) {
-    embedTag.setAttribute("src", "./svg/check.svg");
-    toast.innerHTML += "Copied to clipboard!";
-  } else {
-    embedTag.setAttribute("src", "./svg/redx.svg");
-    toast.innerHTML += "Failed copy to clipboard.";
-  }
+  const embedElement = document.createElement("embed");
+  embedElement.setAttribute("src", isSuccess ? "./svg/check.svg" : "./svg/redx.svg");
+  const textNode = document.createTextNode(isSuccess ? "Copied to clipboard!" : "Failed copy to clipboard.");
+  toast.appendChild(embedElement);
+  toast.appendChild(textNode);
   toast.classList.remove("toast");
   toast.classList.add("toast-show");
   setTimeout(() => {
+    toast.innerHTML = "";
     toast.classList.remove("toast-show");
     toast.classList.add("toast");
   }, 3000);
