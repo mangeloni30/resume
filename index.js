@@ -103,15 +103,46 @@ observer.observe(homeSection);
 
 const gmailContact = document.querySelector(".contact-copy-wrapper p");
 
+/**
+ * @method displayToast
+ * @description responsible of display
+ * the toast and set the corresponding
+ * icon and message given the isSuccess param
+ * @param {boolean} isSuccess
+ * @author angelonimartin90@gmail.com
+ */
+const displayToast = (isSuccess = true) => {
+  const toast = document.querySelector(".toast");
+  const embedTag = document.querySelector(".toast embed");
+  if (isSuccess) {
+    embedTag.setAttribute("src", "./svg/check.svg");
+    toast.innerHTML += "Copied to clipboard!";
+  } else {
+    embedTag.setAttribute("src", "./svg/redx.svg");
+    toast.innerHTML += "Failed copy to clipboard.";
+  }
+  toast.classList.remove("toast");
+  toast.classList.add("toast-show");
+  setTimeout(() => {
+    toast.classList.remove("toast-show");
+    toast.classList.add("toast");
+  }, 3000);
+};
+
+/**
+ * @method gmailCopyClick
+ * @description responsible of get the text content from
+ * email contact element and call displayToast function
+ * @author angelonimartin90@gmail.com
+ */
 const gmailCopyClick = () => {
   const mailAddress = document.querySelector(".contact-mail").textContent;
-  // Create a new clipboard object
   navigator.clipboard.writeText(mailAddress.trim())
-    .then(function() {
-      // do something
+    .then(() => {
+      displayToast();
     })
-    .catch(function(error) {
-      // do something
+    .catch(() => {
+      displayToast(false);
     });
 }
 
