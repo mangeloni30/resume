@@ -1,5 +1,9 @@
 "use strict";
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
 const homeButton = document.querySelector("#home-button");
 const aboutButton = document.querySelector("#about-button");
 const skillButton = document.querySelector("#skill-button");
@@ -87,6 +91,7 @@ const header = document.querySelector("header");
 const callBack = (entries, observer) => {
   const [entry] = entries;
   if (!entry.isIntersecting) {
+    header.classList.remove("fade-in");
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");
@@ -95,13 +100,38 @@ const callBack = (entries, observer) => {
 
 const options = {
   root: null,
-  threshold: 0
+  threshold: 0.15
 };
 
 const observer = new IntersectionObserver(callBack, options);
 observer.observe(homeSection);
 
 const gmailContact = document.querySelector(".contact-copy-wrapper p");
+
+const revealSections = (entries, observer) => {
+  const [entry] = entries;
+  console.log("entry ", entry);
+  if (entry.isIntersecting) {
+    entry.target.classList.add("side-up");
+  } else {
+    entry.target.classList.remove("side-up")
+  }
+  observer.unobserve(entry.target);
+};
+
+const sectionOptions = {
+  root: null,
+  threshold: 0
+};
+
+const sectionObserver = new IntersectionObserver(revealSections, sectionOptions);
+
+const sections = document.querySelectorAll(".side-up-wrapper");
+console.log("sections ", sections);
+sections.forEach((sectionItem) => {
+  sectionObserver.observe(sectionItem)
+});
+
 
 /**
  * @method displayToast
